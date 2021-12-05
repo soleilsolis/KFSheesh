@@ -5,23 +5,30 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Controllers\ErrorMessages;
 
 class UserController extends Controller
 {
 
-    public function login(Request $request, User $user){
+    public function login(Request $request, User $user, ErrorMessages $errorMessages){
 
-        $login = $user->where('username','=',$request->username)->first();
+        $validated = $request->validate([
+            'email' => 'required',
+            'password' => 'required'
+        ]);
+
+
+        $login = $user->where('email','=',$request->email)->first();
 
         if(!$login){
 
-
+            return $errorMessages->wrongCredentials(['email','password']);
 
         }
 
         if(!Hash::check($request->password, $login->password)){
 
-
+            return 0;
 
         }
 

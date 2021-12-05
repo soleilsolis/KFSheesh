@@ -52,10 +52,14 @@
                 @yield('title')
             </h2>
 
-            <div class="search-wrapper">
-                <span class="las la-search"></span>
-                <input type="search" placeholder="Search here">
-            </div>
+            @if ($page != 'dashboard')
+
+                <div class="search-wrapper">
+                    <span class="las la-search"></span>
+                    <input type="search" placeholder="Search here">
+                </div>
+
+            @endif
 
             <div class="user-wrapper">
                 <img src="/Images/admin.png" width="40px" height="40px" alt="admin">

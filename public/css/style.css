@@ -61,7 +61,7 @@ html, body {
   position: relative;
 }
 
-.wrapper form .field input {
+.wrapper form .field input, .submit-form {
   height: 100%;
   width: 100%;
   outline: none;
@@ -147,7 +147,7 @@ form .content {
   color: "";
 }
 
-form .field input[type="submit"] {
+.submit-form {
   color: #fff;
   border: none;
   padding-left: 0;
@@ -161,7 +161,7 @@ form .field input[type="submit"] {
   transition: all 0.3s ease;
 }
 
-form .field input[type="submit"]:active {
+.submit-form:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }

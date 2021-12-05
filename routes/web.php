@@ -21,13 +21,15 @@ Route::get('/', function () {
     return view('pages.home.index');
 });
 
+Route::get('/login', function () {
+    return view('pages.home.login');
+});
+
 Route::get('/{section}/{page}', function ($section, $page) {
     return view("pages.$section.$page",[ 'page' => $page ]);
 });
 
-
 //Route::post('/app/{controller}/{class}',[ucfirst()]);
-
 
 Route::post('/app/user/login',[UserController::class, 'login']);
 Route::post('/app/user/store',[UserController::class, 'store']);
