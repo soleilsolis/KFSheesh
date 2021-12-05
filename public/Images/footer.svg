@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2237" height="591" viewBox="0 0 2237 591">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1a4645"/>
+      <stop offset="1" stop-color="#050e0e"/>
+    </linearGradient>
+  </defs>
+  <g id="footer" transform="translate(0 -6073)">
+    <rect id="Rectangle_10" data-name="Rectangle 10" width="1920" height="514" transform="translate(0 6150)" fill="url(#linear-gradient)"/>
+    <text id="KF.Sheesh" transform="translate(151 6371)" fill="#fff" font-size="60" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">KF.Sheesh</tspan></text>
+    <g id="hero-footer" transform="translate(525 5787)">
+      <g id="Polygon_1" data-name="Polygon 1" transform="translate(1390 286)" fill="#1a4645">
+        <path d="M 214.1575469970703 196.5 L 0.8424509167671204 196.5 L 107.5 1.043840289115906 L 214.1575469970703 196.5 Z" stroke="none"/>
+        <path d="M 107.5 2.087631225585938 L 1.68487548828125 196 L 213.3151245117188 196 L 107.5 2.087631225585938 M 107.5 0 L 215 197 L 0 197 L 107.5 0 Z" stroke="none" fill="#707070"/>
+      </g>
+      <g id="Polygon_2" data-name="Polygon 2" transform="translate(1283 483)" fill="#1a6465">
+        <path d="M 214.1575469970703 196.5 L 0.8424509167671204 196.5 L 107.5 1.043840289115906 L 214.1575469970703 196.5 Z" stroke="none"/>
+        <path d="M 107.5 2.087631225585938 L 1.68487548828125 196 L 213.3151245117188 196 L 107.5 2.087631225585938 M 107.5 0 L 215 197 L 0 197 L 107.5 0 Z" stroke="none" fill="#707070"/>
+      </g>
+      <g id="Polygon_3" data-name="Polygon 3" transform="translate(1497 483)" fill="#1a4645">
+        <path d="M 214.1575469970703 196.5 L 0.8424509167671204 196.5 L 107.5 1.043840289115906 L 214.1575469970703 196.5 Z" stroke="none"/>
+        <path d="M 107.5 2.087631225585938 L 1.68487548828125 196 L 213.3151245117188 196 L 107.5 2.087631225585938 M 107.5 0 L 215 197 L 0 197 L 107.5 0 Z" stroke="none" fill="#707070"/>
+      </g>
+      <g id="Polygon_4" data-name="Polygon 4" transform="translate(1067 483)" fill="#fff">
+        <path d="M 214.1575469970703 196.5 L 0.8424509167671204 196.5 L 107.5 1.043840289115906 L 214.1575469970703 196.5 Z" stroke="none"/>
+        <path d="M 107.5 2.087631225585938 L 1.68487548828125 196 L 213.3151245117188 196 L 107.5 2.087631225585938 M 107.5 0 L 215 197 L 0 197 L 107.5 0 Z" stroke="none" fill="#707070"/>
+      </g>
+      <g id="Polygon_5" data-name="Polygon 5" transform="translate(960 680)" fill="#1a6465">
+        <path d="M 214.1575469970703 196.5 L 0.8424509167671204 196.5 L 107.5 1.043840289115906 L 214.1575469970703 196.5 Z" stroke="none"/>
+        <path d="M 107.5 2.087631225585938 L 1.68487548828125 196 L 213.3151245117188 196 L 107.5 2.087631225585938 M 107.5 0 L 215 197 L 0 197 L 107.5 0 Z" stroke="none" fill="#707070"/>
+      </g>
+      <g id="Polygon_6" data-name="Polygon 6" transform="translate(1174 680)" fill="#fff">
+        <path d="M 214.1575469970703 196.5 L 0.8424509167671204 196.5 L 107.5 1.043840289115906 L 214.1575469970703 196.5 Z" stroke="none"/>
+        <path d="M 107.5 2.087631225585938 L 1.68487548828125 196 L 213.3151245117188 196 L 107.5 2.087631225585938 M 107.5 0 L 215 197 L 0 197 L 107.5 0 Z" stroke="none" fill="#707070"/>
+      </g>
+    </g>
+    <text id="_09982436013_kfsheesh_gmail.com_" data-name="09982436013
+kfsheesh@gmail.com
+
+" transform="translate(151 6424)" fill="#fff" font-size="30" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">09982436013</tspan><tspan x="0" y="46">kfsheesh@gmail.com</tspan><tspan x="0" y="92"></tspan><tspan x="0" y="138"></tspan></text>
+  </g>
+</svg>
