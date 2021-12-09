@@ -17,7 +17,7 @@
             <div class="card-header">
                 <h2>Projects List</h2>
             </div>
-            <div class="card-body">
+            <div class="card-body max-h">
                 <div class="table-responsive">
                     <table class="ui very basic padded stackable selectable table">
                         <thead>
@@ -35,8 +35,8 @@
                                     <td>{{ $project->projectType->name }}</td>
                                     <td>{{ $project->company_name }}</td>
                                     <td class="right aligned" style="display: block">{{ $project->created_at }}</td>
-                                </tr>    
-                            @endforeach                        
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -88,7 +88,7 @@
 </div>
 
 <div class="ui basic tiny delete modal">
-    
+
     <div class="content">
 		<div class="ui segment" style="color: black !important">
             <div class="header">
@@ -104,7 +104,7 @@
 </div>
 
 <div class="ui basic tiny finish modal">
-    
+
     <div class="content">
 		<div class="ui segment" style="color: black !important">
             <div class="header">

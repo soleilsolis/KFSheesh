@@ -16,15 +16,15 @@
 				<h2>Clients List</h2>
 			</div>
 
-			<div class="card-body">
+			<div class="card-body max-h">
 				<div class="table-responsive">
 					<table class="ui very basic padded stackable selectable table">
-						<thead>            
-							<tr>                           
+						<thead>
+							<tr>
 								<th class="collapsing">Username</th>
 								<th>Name</th>
-								<th class="right aligned">Date Registered</th>     
-							</tr> 
+								<th class="right aligned">Date Registered</th>
+							</tr>
 						</thead>
 
 						<tbody>
@@ -33,10 +33,10 @@
 									<td class="collapsing">{{ $user->name }}</td>
 									<td>{{ $user->full_name }}</td>
 									<td class="right aligned" style="display: block">{{ $user->created_at }}</td>
-								</tr>							
-							@endforeach						
+								</tr>
+							@endforeach
 						</tbody>
-					</table>     
+					</table>
 				</div>
 			</div>
 		</div>
@@ -58,7 +58,7 @@
 						<label>Username</label>
 						<input type="text" name="name" id="name">
 					</div>
-	
+
 					<div class="field">
 						<label>Password</label>
 						<input type="password" name="password" id="password">
@@ -68,12 +68,12 @@
 						<label>Full Name</label>
 						<input type="text" name="full_name" id="full_name">
 					</div>
-	
+
 					<div class="field">
 						<label>Email Address</label>
 						<input type="email" name="email" id="email">
 					</div>
-	
+
 					<div class="field">
 						<label for="">Gender</label>
 						<div class="ui dropdown selection" tabindex="0">
@@ -94,7 +94,7 @@
 							</div>
 						</div>
 					</div>
-	
+
 					<div class="field">
 						<label for="">Account Type</label>
 						<div class="ui dropdown selection" tabindex="0">
@@ -111,7 +111,7 @@
 						</div>
 					</div>
 				</form>
-				
+
 				<br />
 
 				<p style="text-align: right">

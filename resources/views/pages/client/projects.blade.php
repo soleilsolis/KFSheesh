@@ -19,7 +19,7 @@
                 <a class="href submit-form" data-send="/app/project/create" data-id="2"><button>New Project <span class="las la-edit">
                 </span></button></a>
             </div>
-            <div class="card-body">
+            <div class="card-body max-h">
                 <div class="table-responsive">
                     <table class="ui very basic padded stackable selectable table">
                         <thead>
@@ -35,8 +35,8 @@
                                     <td>{{ $project->name }}</td>
                                     <td>{{ $project->projectType->name }}</td>
                                     <td class="right aligned" style="display: block">{{ $project->created_at }}</td>
-                                </tr>    
-                            @endforeach                        
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -60,7 +60,7 @@
 						<label>Title</label>
 						<input type="text" name="name">
 					</div>
-                 
+
 					<div class="field">
                         <label for="">Project Type</label>
                         <div class="ui dropdown selection" tabindex="0">
@@ -74,7 +74,7 @@
                             <div class="menu project_type-select" tabindex="-1">
                                 @foreach (ProjectType::all() as $projectType)
                                     <div class="item" data-value="{{ $projectType->id }}" data-text="{{ $projectType->name }}">{{ $projectType->name }}</div>
-                                @endforeach                                   
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -102,13 +102,14 @@
     </div>
 </div>
 <div class="ui basic tiny delete modal">
-    
+
     <div class="content">
 		<div class="ui segment" style="color: black !important">
             <div class="header">
                 <h2>Delete Project?</h2>
                 <br />
 				<p style="text-align: right">
+                    <button class="ui black circular button" onclick="$('.delete.modal').modal('hide')">No!</button>
                     <button class="ui red circular button submit-form" data-form="projectForm" data-send="/app/project/destroy">Yes!</button>
 				</p>
             </div>

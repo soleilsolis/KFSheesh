@@ -13,15 +13,15 @@
 			Login
 		</div>
 
-		<form id="loginField">
+		<form id="loginField" autocomplete="off">
 			@csrf
 			<div class="field">
-				<input name="email" type="text" required>
+				<input name="email" type="text"   autocomplete="off" required>
 				<label>Email Address</label>
 			</div>
 
 			<div class="field">
-				<input name="password" type="password" required>
+				<input name="password" type="password"  autocomplete="off" required>
 				<label>Password</label>
 			</div>
 
@@ -42,6 +42,11 @@
 	</footer>
 
 	<script src="\js\jquery.min.js"></script>
+    <script>
+
+
+
+    </script>
 	<script src="\semantic\dist\components\transition.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -64,6 +69,8 @@
 			  ease: Power4.easeout,
 			  duration: 2
 		 }, "-=1.5")
+
+
 	</script>
 </body>
 </html>

@@ -50,7 +50,7 @@
             <h1>{{ Project::count() ?? '--' }}</h1>
             <span>Total Projects</span>
         </div>
-        
+
         <div>
             <span class="las la-tasks"></span>
         </div>
@@ -66,7 +66,7 @@
                 </span></button></a>
             </div>
 
-            <div class="card-body">
+            <div class="card-body ">
                 <div class="table-responsive">
                     <table class="ui very basic padded stackable selectble table">
                         <thead>
@@ -75,7 +75,7 @@
                                 <th>Type</th>
                                 <th>Status</th>
                             </tr>
-                            <tbody> 
+                            <tbody>
                             @foreach (Project::limit(7)->get() as $project)
                                 <tr>
                                     <td>{{ $project->name }}</td>
@@ -84,7 +84,7 @@
                                         {{ $project->status }}
                                     </td>
                                 </tr>
-                            @endforeach                 
+                            @endforeach
                             </tbody>
                         </thead>
                     </table>

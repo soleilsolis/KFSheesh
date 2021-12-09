@@ -16,7 +16,12 @@
     <link rel="stylesheet" type="text/css" href="\semantic\dist\components\table.min.css">
     <link rel="stylesheet" type="text/css" href="\semantic\dist\components\transition.min.css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+    <style>
+        .max-h{
+            max-height: 73vh;
+            overflow-y:scroll;
+        }
+    </style>
 </head>
 <body>
 

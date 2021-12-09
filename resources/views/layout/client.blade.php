@@ -18,10 +18,16 @@
     <link rel="stylesheet" type="text/css" href="\semantic\dist\components\transition.min.css">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <style>
+        .max-h{
+            max-height: 73vh;
+            overflow-y:scroll;
+        }
+    </style>
 </head>
 <body>
     <input type="checkbox" id="nav-toggle">
-    
+
     <div class="sidebar">
         <div class="sidebar-brand">
             <h2><span>△</span><span>KF.Sheesh</span></h2>
@@ -86,7 +92,7 @@
             @yield('content')
         </main>
     </div>
-    
+
     <script src="\js\jquery.min.js"></script>
     <script src="\semantic\dist\components\dimmer.min.js"></script>
     <script src="\semantic\dist\components\dropdown.min.js"></script>
