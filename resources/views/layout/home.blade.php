@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KF.Sheesh</title>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/errorfields.css" class="stylesheet">
 </head>
 <body>
 
@@ -17,7 +18,7 @@
                <ul>
                     <li><a href="#members">About us</a></li>
                     <li><a href="#featured">Our Projects</a></li>
-                    <li><a href="">Hire us</a></li>
+                    <li><a href="/login">Hire us</a></li>
                </ul>
            </nav>
        </header>

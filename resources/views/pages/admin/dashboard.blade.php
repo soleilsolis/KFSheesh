@@ -1,3 +1,9 @@
+@php
+    use App\Models\User;
+    use App\Models\Project;
+    use Carbon\Carbon;
+@endphp
+
 @extends('layout.admin')
 
 @section('title')
@@ -5,13 +11,13 @@
 @endsection
 
 @section('content')
-
 <div class="cards">
     <div class="card-single">
         <div>
-            <h1>--</h1>
+            <h1>{{ User::where('type','!=','admin')->where('created_at','>', Carbon::now()->subDays(30))->count() ?? '--' }}</h1>
             <span>New Clients</span>
         </div>
+
         <div>
             <span class="las la-user"></span>
         </div>
@@ -19,9 +25,10 @@
 
     <div class="card-single">
         <div>
-            <h1>--</h1>
+            <h1>{{ User::where('type','!=','admin')->count() ?? '--' }}</h1>
             <span>Total Clients</span>
         </div>
+
         <div>
             <span class="las la-users"></span>
         </div>
@@ -29,9 +36,10 @@
 
     <div class="card-single">
         <div>
-            <h1>--</h1>
+            <h1>{{ Project::where('created_at','>', Carbon::now()->subDays(30))->count() ?? '--' }}</h1>
             <span>New Projects</span>
         </div>
+
         <div>
             <span class="las la-clipboard-list"></span>
         </div>
@@ -39,9 +47,10 @@
 
     <div class="card-single">
         <div>
-            <h1>--</h1>
+            <h1>{{ Project::count() ?? '--' }}</h1>
             <span>Total Projects</span>
         </div>
+        
         <div>
             <span class="las la-tasks"></span>
         </div>
@@ -53,70 +62,32 @@
         <div class="card">
             <div class="card-header">
                 <h2>Recent Projects</h2>
-                <a href="projectslist.html" class="href"><button>See all <span class="las la-arrow-right">
+                <a href="projects" class="href"><button>See all <span class="las la-arrow-right">
                 </span></button></a>
             </div>
 
             <div class="card-body">
                 <div class="table-responsive">
-                <table width="100%">
+                    <table class="ui very basic padded stackable selectble table">
                         <thead>
                             <tr>
-                                <td>Project Title</td>
-                                <td>Type</td>
-                                <td>Status</td>
+                                <th>Project Title</th>
+                                <th>Type</th>
+                                <th>Status</th>
                             </tr>
-                            <tbody>
+                            <tbody> 
+                            @foreach (Project::limit(7)->get() as $project)
                                 <tr>
-                                    <td>Sample Title</td>
-                                    <td>Sample Type</td>
+                                    <td>{{ $project->name }}</td>
+                                    <td>{{ $project->projectType->name }}</td>
                                     <td><span class="status purple"></span>
-                                    sample status
-                                </td>
+                                        {{ $project->status }}
+                                    </td>
                                 </tr>
-
-                                <tr>
-                                    <td>Sample Title</td>
-                                    <td>Sample Type</td>
-                                    <td><span class="status orange"></span>
-                                    sample status
-                                </td>
-                                </tr>
-
-                                <tr>
-                                    <td>Sample Title</td>
-                                    <td>Sample Type</td>
-                                    <td><span class="status green"></span>
-                                    sample status
-                                </td>
-                                </tr>
-
-                                <tr>
-                                    <td>Sample Title</td>
-                                    <td>Sample Type</td>
-                                    <td><span class="status purple"></span>
-                                    sample status
-                                </td>
-                                </tr>
-
-                                <tr>
-                                    <td>Sample Title</td>
-                                    <td>Sample Type</td>
-                                    <td><span class="status orange"></span>
-                                    sample status
-                                </td>
-                                </tr>
-
-                                <tr>
-                                    <td>Sample Title</td>
-                                    <td>Sample Type</td>
-                                    <td><span class="status green"></span>
-                                    sample status
-                                </td>
-                                </tr>
+                            @endforeach                 
                             </tbody>
                         </thead>
-                </table>
+                    </table>
                 </div>
             </div>
         </div>
@@ -126,43 +97,22 @@
         <div class="card">
             <div class="card-header">
                 <h2>New Clients</h2>
-                <a href="clientslist.html" class="href"><button>See all <span class="las la-arrow-right">
+                <a href="clients" class="href"><button>See all <span class="las la-arrow-right">
                 </span></button></a>
             </div>
+
             <div class="card-body">
-                <div class="customer">
-                    <img src="Images/user.png" alt="" width="40px" height="40px">
-                </div>
-                <div>
-                    <h4>Sample Name</h4>
-                </div>
+                @foreach (User::limit(7)->get() as $user)
+                    <div class="customer">
+                        <img src="Images/user.png" alt="" width="40px" height="40px">
+                    </div>
 
-                <div class="customer">
-                    <img src="Images/user.png" alt="" width="40px" height="40px">
-                </div>
-                <div>
-                    <h4>Sample Name</h4>
-                </div>
-
-                <div class="customer">
-                    <img src="Images/user.png" alt="" width="40px" height="40px">
-                </div>
-                <div>
-                    <h4>Sample Name</h4>
-                </div>
-
-                <div class="customer">
-                    <img src="Images/user.png" alt="" width="40px" height="40px">
-                </div>
-                <div>
-                    <h4>Sample Name</h4>
-                </div>
-            </div>
-
-            <div>
+                    <div>
+                        <h4>{{ $user->name }}</h4>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
 </div>
-
 @endsection

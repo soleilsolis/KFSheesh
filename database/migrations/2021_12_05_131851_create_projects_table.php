@@ -20,10 +20,12 @@ class CreateProjectsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->longText('description')->nullable();
             $table->longText('company_name')->nullable();
-            $table->enum('status', ['Ongoing','Finished']);
+            $table->enum('status', ['Ongoing','Finished'])->default('Ongoing');
             $table->foreign('project_type_id')->references('id')->on('project_types');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 
