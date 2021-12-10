@@ -30,7 +30,7 @@ Route::get('/registration', function () {
 });
 
 
-Route::get('/{section}/{page}', function ($section, $page) {
+Route::match(['get', 'post'],'/{section}/{page}', function ($section, $page) {
     return view("pages.$section.$page",[ 'page' => $page ]);
 })->middleware('logged.in');
 

@@ -80,7 +80,13 @@
                                 <tr>
                                     <td>{{ $project->name }}</td>
                                     <td>{{ $project->projectType->name }}</td>
-                                    <td><span class="status purple"></span>
+                                    <td>
+                                        @if($project->status == 'Ongoing')
+                                            <span class="status yellow"></span>
+                                        @else  
+                                            <span class="status green"></span>
+                                        @endif
+
                                         {{ $project->status }}
                                     </td>
                                 </tr>
@@ -102,15 +108,24 @@
             </div>
 
             <div class="card-body">
-                @foreach (User::limit(7)->get() as $user)
+
+                <div class="ui very relaxed list">
+                    
+                @foreach (User::where('type','=','client')->limit(7)->get() as $user)
+                    <div class="item">
+                        <img class="ui avatar image" src="/Images/user.png" alt="" width="40px" height="40px">
+                    <div class="content">
+                      <a class="header">{{ $user->name }}e</a>
+                      
+                    </div>
+                  </div>
                     <div class="customer">
-                        <img src="Images/user.png" alt="" width="40px" height="40px">
+                        
                     </div>
 
-                    <div>
-                        <h4>{{ $user->name }}</h4>
-                    </div>
                 @endforeach
+
+                </div>
             </div>
         </div>
     </div>

@@ -28,7 +28,7 @@
 						</thead>
 
 						<tbody>
-							@foreach (User::all() as $user)
+							@foreach (User::where('type','=','client')->get() as $user)
 								<tr class="submit-form" data-id="{{ $user->id }}" data-send="/app/user/edit">
 									<td class="collapsing">{{ $user->name }}</td>
 									<td>{{ $user->full_name }}</td>

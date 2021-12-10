@@ -95,6 +95,7 @@
                 <h2>Delete Project?</h2>
                 <br />
 				<p style="text-align: right">
+                    <button class="ui black circular button" onclick="$('.delete.modal').modal('hide')">No!</button>
                     <button class="ui red circular button submit-form" data-form="projectForm" data-send="/app/project/destroy">Yes!</button>
 				</p>
             </div>
