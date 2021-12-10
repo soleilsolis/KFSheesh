@@ -55,10 +55,8 @@
 					</div>
                     <p style="text-align: center">
                         <a class="ui black circular button submit-form" data-form="clientForm" data-send="/app/user/update">Save</a>
-    
                     </p>
 				</form>
-               
             </div>
         </div>
     </div>

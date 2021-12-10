@@ -129,7 +129,7 @@ class UserController extends Controller
             'type' => $edit->type
         ];
 
-        return $errorMessages->data($data, '.modal');
+        return $errorMessages->data($data, '.client.modal');
     }
 
     /**
@@ -199,8 +199,9 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, User $user){
+    public function destroy(Request $request, User $user, ErrorMessages $errorMessages){
         $destroy = $user->find($request->id);
         $destroy->delete();
+        return $errorMessages->reload();
     }
 }

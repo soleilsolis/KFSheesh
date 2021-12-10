@@ -43,7 +43,7 @@
 	</div>
 </div>
 
-<div class="ui small basic modal">
+<div class="ui small basic client modal">
 	<div class="content">
 		<div class="ui segments" style="color: black !important">
 			<div class="ui segment">
@@ -115,6 +115,7 @@
 				<br />
 
 				<p style="text-align: right">
+					<button class="ui red circular button delete-button">Delete</button>
 					<button class="ui black circular button submit-form" data-form="clientForm" data-send="/app/user/update">Save</button>
 				</p>
 			</div>
@@ -122,11 +123,31 @@
 	</div>
 </div>
 
+<div class="ui basic tiny delete modal">
+
+    <div class="content">
+		<div class="ui segment" style="color: black !important">
+            <div class="header">
+                <h2>Delete Client?</h2>
+                <br />
+				<p style="text-align: right">
+                    <button class="ui black circular button" onclick="$('.delete.modal').modal('hide')">No!</button>
+                    <button class="ui red circular button submit-form" data-form="clientForm" data-send="/app/user/destroy">Yes!</button>
+				</p>
+            </div>
+        </div>
+    </div>
+
+	
+  
 @endsection
 
 @section('js')
 	<script>
 
+		$('.delete-button').click(function(){
+        	$('.delete.modal').modal('show');
+   		});
 		$('.dropdown').dropdown();
 
 	</script>
